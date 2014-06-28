@@ -4,13 +4,14 @@
  Executive Summary
 ===================
 
-We will make an alternative to Dropbox that people in repressive countries
-can use to collaborate and to share their work. Unlike Dropbox, Magic Folder
-will protect the user’s files with end-to-end crypto, so that adversaries
-who compromise a server cannot spy on the files or inject content into them.
-Also unlike Dropbox, the entire stack of client and server will be Free and
-Open Source, so that people whose are blocked from accessing Dropbox can
-deploy Magic Folder using only their own local resources.
+Magic Folder will be an alternative to Dropbox that people in
+repressive countries can use to collaborate and to share their
+work. Unlike Dropbox, Magic Folder will protect the user’s files with
+end-to-end cryptography, so that adversaries who compromise a server cannot
+spy on the files or inject content into them.  Also unlike Dropbox,
+the entire stack of client and server will be Free and Open Source, so
+that people who are blocked from accessing Dropbox can deploy Magic
+Folder using only their own local resources.
 
 There are already tools available to people in politically repressive
 countries to help them chat with one another and browse the web. But chatting
@@ -56,11 +57,11 @@ remote, proprietary, centralized services.
 We propose to extend the Tahoe-LAFS storage system to into an easy-to-use
 automatic file-synchronization system like Dropbox. Tahoe-LAFS is a
 distributed storage technology in which all files are protected with
-end-to-end crypto. It has won praise and support from academic computer
+end-to-end cryptography. It has won praise and support from academic computer
 science researchers, Richard Stallman, the Electronic Frontier Foundation,
 the U.S. Defense Advanced Research Projects Agency, the U.S. National
 Security Agency, and the Open Internet Tools Project, among others.
-Tahoe-LAFS is currently doesn’t offer the kind of intuitive, user-friendly
+Tahoe-LAFS currently doesn’t offer the kind of intuitive, user-friendly
 workflow and automatic synchronization that Dropbox and Google Drive do.
 
 If we are successful, this technology will help empower people in repressive
