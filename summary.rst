@@ -4,14 +4,14 @@
  Executive Summary
 ===================
 
-Magic Folder will be an alternative to Dropbox that people in
+Magic Folders will be an alternative to Dropbox that people in
 repressive countries can use to collaborate and to share their
-work. Unlike Dropbox, Magic Folder will protect the user’s files with
+work. Unlike Dropbox, Magic Folders will protect the user’s files with
 end-to-end cryptography, so that adversaries who compromise a server cannot
 spy on the files or inject content into them.  Also unlike Dropbox,
 the entire stack of client and server will be Free and Open Source, so
 that people who are blocked from accessing Dropbox can deploy Magic
-Folder using only their own local resources.
+Folders using only their own local resources.
 
 There are already tools available to people in politically repressive
 countries to help them chat with one another and browse the web. But chatting
@@ -117,7 +117,7 @@ never silently fails to complete it, which would force the user to monitor
 whether the action completes and repeat the request if it doesn't.
 
 For example, if the user indicates that a file should be shared by dragging
-and dropping it into the magic folder, then the file will *eventually* be
+and dropping it into a magic folder, then the file will *eventually* be
 shared (when the network connection to the servers is working), even if the
 network connection to the servers was not working at the time the
 drag-and-drop was first performed, *without* the user having to repeat the
