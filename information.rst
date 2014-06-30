@@ -14,7 +14,9 @@
 
 • Common Name: LeastAuthority, LLC
 
-• Contact: Zooko Wilcox-O'Hearn, zooko@LeastAuthority.com, 303-543-2301
+• Contact: Zooko Wilcox-O'Hearn
+
+• zooko@LeastAuthority.com, 303-543-2301
 
 • 3450 Emerson Ave., Boulder, CO, 80305-6452
 
