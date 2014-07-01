@@ -85,7 +85,7 @@ local filesystem's mv/rename operation) with the newly downloaded version.
 
 .. Also needed. Also from the Team Sync proposal: " *** ^-- MORE DRAGONS. Yesterday Daira came up with a good hack to subdue this dragon, too. Also ellided. "
 
-Objective 4—Implement algorithm for remove-to-local-sync
+Objective 4—Implement algorithm for remote-to-local-sync
 ========================================================
 
 *Objective 4* is to implement the remote-to-local sync algorithm as defined
