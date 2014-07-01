@@ -53,8 +53,8 @@ Internet Tools Project, among others. But, Tahoe-LAFS currently doesn’t offer 
 kind of intuitive, user-friendly workflow that Dropbox and Google Drive do.
 
 If we are successful, this technology will help empower people in repressive
-countries to communicate, collaborate, and organize, without incurring the
-unnecessary risks of being exploited or censored by repressive regimes.
+countries to communicate, collaborate, and organize, while greatly reducing
+the risks of being exploited or censored by repressive regimes.
 
 ¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
 
