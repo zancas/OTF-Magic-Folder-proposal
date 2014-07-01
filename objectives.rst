@@ -59,6 +59,30 @@ defined by *Objecive 1*. The deliverable for *Objective 2* is a code-base
 (satisfying the requirements listed in the “Project Evaluation” section) for
 those platforms.
 
+Our development method includes a concrete measure of progress.  We write "unit" tests
+that fail until software is implemented that generates the necessary functionality.
+For example, we'll write a test that fails until the sync client correctly detects
+all changes to the local magic directory on its file system, every time it scans. Then,
+after the test is in place, we'll implement the scanning routine which causes the test to "pass".
+
+When the following unit tested measurables are implemented, we'll have achieved the objective
+of implementing a code-base that fulfills the requirements of *Objective 2*.
+
+Measurables:
+
+ 1. Correct Operation: A running, up-to-date sync client *always* detects changes to the magic directory.
+
+ 2. Correct Operation: During scan operations the sync client identifies *all* changes to the magic directory.
+   
+ 3. Correct Operation: The sync client runs the scan functionality whenever necessary, but never when
+    unnecessary.  
+ 
+ 4. Efficient Operation: The local filesystem integration meets efficiency benchmarks, as defined in *Objective 1*.
+    These benchmarks will include the results of running all necessary operations over large
+    numbers of files, and deeply nested directory structures, where "large" and "deeply" will
+    be suitably defined in *Objective 1*.
+
+
 Objective 3—Design algorithm for remote-to-local sync
 =====================================================
 
