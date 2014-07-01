@@ -33,7 +33,11 @@ accidentally turned off user verification, allowing anyone on the Internet to
 read or edit the files of any Dropbox user for 4 hours ².
 
 In addition, since Dropbox and its competitors are centralized services, it
-is easy for repressive regimes to block access to those services. This
+is easy for repressive regimes to block access to those services. 
+
+XXX
+
+This
 provides repressive regimes with an easy method of forcing users of those
 services to fall-back to alternative means of collaboration, possibly as a
 prelude to exploiting those users, or for political or business purposes. In
