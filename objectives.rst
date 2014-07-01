@@ -1,4 +1,6 @@
 ﻿
+.. XXX Hm, we need to detect write-conflicts. I think a simple Lamport-vector-clock-style solution is necessary to indicate whether an incoming write is a conflict (the writer wasn't aware of all of your changes) or an over-write (the writer was aware of all of your changes).
+
 
 Objective 1—Design local filesystem integration
 ===============================================
