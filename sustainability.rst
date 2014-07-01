@@ -1,23 +1,23 @@
-﻿.. -*- coding: utf-8-with-signature -*-
-
-.. Okay I think this section is done, in a first draft form. It has only 223 words, when the recommendation is "300 words recommended, 1000 word max", but I figure fewer is better.
-
-================
- Sustainability
-================
+﻿
 
 There are two complementary ways that Magic Folders will be sustained after
 this project.
 
 First, Tahoe-LAFS is a thriving Free and Open Source project which has
-garnered praise, support, and contributions from many sources (see `Community
-Interaction`_). We expect that the successful completion of the Magic Folders
-project will stimulate even greater enthusiasm from such contributors.
+garnered praise, support, and contributions from many sources (see the
+“Community Interaction” section). We expect that the successful completion of
+the Magic Folders project will stimulate even greater enthusiasm from such
+contributors.
 
 Second, LeastAuthority intends to commercialize Magic Folders for profit. If
 that attempt succeeds, LeastAuthority will likely reinvest some of the profit
 in improving and extending Magic Folders and in creating complementary
 products.
+
+In pursuit of that ambition, LeastAuthority has designed this Magic Folders
+proposal as a “Minimum Viable Product” — intended to reach usability as soon
+as possible in order to start the process of iteratively learning from the
+response of users and improving the product.
 
 The Free and Open Source software licence of Tahoe-LAFS allows proprietary
 extensions of Tahoe-LAFS, but requires that all such extensions be
