@@ -16,6 +16,8 @@ Source programmers, and they are also necessary for security.
 Functionality
 =============
 
+.. XXX Add a requirement about the user being able to recover old versions in case of accidental overwrite. (As we learned from doing the Team Sync proposal.)
+
 The most important measure of success is if the resulting technology provides
 the desired functionality (without sacrificing security). The desired
 functionality is that the system can be used to share and synchronize files
@@ -32,6 +34,10 @@ functionality while preserving Tahoe-LAFS's security and fault-tolerance.
   users at the same time will result in the preservation of all of the edits
   performed by all users (although possibly not all under the same old
   filename).
+
+* *Recoverability*: if a file is accidentally overwritten, then it is
+   possible for the user to recover the previous version so that nothing is
+   lost.
 
 * *Least-Authority Access Control*: users can grant read-only access or
   read-write access to any subset of their files or any subtree of their
