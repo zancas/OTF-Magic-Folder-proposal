@@ -28,7 +28,7 @@ Google Drive.
 In May of 2011, Dropbox was revealed to have lied when it claimed that its
 users' files were inaccessible to Dropbox employees ¹.
 
-And one month later, the potential impact was demonstrated when Dropbox
+One month later, the potential impact was demonstrated when Dropbox
 accidentally turned off user verification, allowing anyone on the Internet to
 read or edit the files of any Dropbox user for 4 hours ².
 
