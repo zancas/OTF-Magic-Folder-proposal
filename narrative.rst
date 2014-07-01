@@ -40,8 +40,6 @@ prelude to exploiting those users, or for political or business purposes. In
 June of 2014, Dropbox was found to have been blocked, again, throughout
 China ³.
 
-³ Russell, J “Dropbox is blocked again in China, both apps and web-based service appear affected” (2014) http://thenextweb.com/asia/2014/06/19/dropbox-blocked-china-ending-four-month-period-access/
-
 It is impossible for users who rely on those products to switch to another
 infrastructure provider or to run their own server.
 
@@ -57,6 +55,8 @@ kind of intuitive, user-friendly workflow that Dropbox and Google Drive do.
 ¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
 
 ² Parrish, K “Dropbox Accidently Turned Off Password for 4 Hrs” Tom's Guide (2011) <http://www.tomsguide.com/us/dropbox-Arash-Ferdowski-cloud-storage-code-update-login,news-11576.html>
+
+³ Russell, J “Dropbox is blocked again in China, both apps and web-based service appear affected” (2014) http://thenextweb.com/asia/2014/06/19/dropbox-blocked-china-ending-four-month-period-access/
 
 Normalization and Sustainability
 ================================
