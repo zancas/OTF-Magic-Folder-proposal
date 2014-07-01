@@ -28,13 +28,9 @@ Google Drive.
 In May of 2011, Dropbox was revealed to have lied when it claimed that its
 users' files were inaccessible to Dropbox employees ¹.
 
-¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
-
 And one month later, the potential impact was demonstrated when Dropbox
 accidentally turned off user verification, allowing anyone on the Internet to
 read or edit the files of any Dropbox user for 4 hours ².
-
-² Parrish, K “Dropbox Accidently Turned Off Password for 4 Hrs” Tom's Guide (2011) <http://www.tomsguide.com/us/dropbox-Arash-Ferdowski-cloud-storage-code-update-login,news-11576.html>
 
 In addition, since Dropbox and its competitors are centralized services, it
 is easy for repressive regimes to block access to those services. This
@@ -47,35 +43,37 @@ China ³.
 ³ Russell, J “Dropbox is blocked again in China, both apps and web-based service appear affected” (2014) http://thenextweb.com/asia/2014/06/19/dropbox-blocked-china-ending-four-month-period-access/
 
 It is impossible for users who rely on those products to switch to another
-infrastructure provider or to run their own server; instead they must rely on
-the remote, proprietary, centralized services.
+infrastructure provider or to run their own server.
 
-We propose to extend the Tahoe-LAFS secure storage system to into an
-easy-to-use file-synchronization system like Dropbox. Tahoe-LAFS is a
-distributed storage technology in which all files are protected with
-end-to-end cryptography. It has won praise and support from academic computer
-scientists, Richard Stallman, the Electronic Frontier Foundation, the
-U.S. Defense Advanced Research Projects Agency, the U.S. National Security
-Agency, and the Open Internet Tools Project, among others. Tahoe-LAFS
-currently doesn’t offer the kind of intuitive, user-friendly workflow that
-Dropbox and Google Drive do.
+We propose to extend the Tahoe-LAFS secure storage system to into an easy
+file-synchronization system like Dropbox. Tahoe-LAFS is a distributed storage
+technology in which all files are protected with end-to-end cryptography. It
+has won praise and support from academic computer scientists, Richard
+Stallman, the Electronic Frontier Foundation, the U.S. Defense Advanced
+Research Projects Agency, the U.S. National Security Agency, and the Open
+Internet Tools Project, among others. Tahoe-LAFS currently doesn’t offer the
+kind of intuitive, user-friendly workflow that Dropbox and Google Drive do.
+
+¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
+
+² Parrish, K “Dropbox Accidently Turned Off Password for 4 Hrs” Tom's Guide (2011) <http://www.tomsguide.com/us/dropbox-Arash-Ferdowski-cloud-storage-code-update-login,news-11576.html>
 
 Normalization and Sustainability
 ================================
 
 Human rights defenders have an ethical imperative to “First, do no harm” in
 handling information about the vulnerable people with whom they work. At the
-same time, they don't have time to investigate and train up on bespoke
+same time, they can't afford to learn about and train up on bespoke
 tools. Human rights defenders, journalists, activists, and the people they
-work with will tend to use whatever tools make it easy to get their job done.
+work with will tend to use whatever tools are normal in their communities and
+make it easy to get their job done.
 
 Therefore to have a a large positive impact we need *normalization* and
 *sustainability*. We aim to make Magic Folders an easy, reliable tool for
-daily work so that it can be the normal way to collaborate. We also aim to
-bring to bear practices from startup culture, such as “Minimal Viable
-Product”, to reduce the risk that the result will fail to fit the needs of
-users, or that it will arrive too late to help. (See the “Sustainability”
-section for more detail.)
+daily work so that it can be the normal way to collaborate. We also bring to
+bear practices from startup culture, such as “Minimal Viable Product”, to
+reduce the risk of Magic Folders failing to fit the needs of users, or
+arriving too late. (See the “Sustainability” section for more detail.)
 
 If we are successful, this technology will help empower people in repressive
 countries to communicate, collaborate, and organize, without incurring
@@ -102,6 +100,14 @@ In order to shorten time-to-market, the process of monitoring for changes
 from the remote side will be a simple polling loop that re-uses Tahoe-LAFS's
 existing functionality, instead of a more efficient asynchronous notification
 system that would require more development time.
+
+A design question which centrally impacts both usability and security is how
+the user specifies which folders are to be magically linked with which other
+folders (on other devices). If the process of linking two remote folders to
+each other is cumbersome or confusing, this may prevent users from adopting
+Magic Folders. At the same time, if the process is centralized or spoofable,
+then this would afford attackers the opportunity to exploit users by
+injecting an attack into the setup process. We propose a simple
 
 XXX incomplete
 
