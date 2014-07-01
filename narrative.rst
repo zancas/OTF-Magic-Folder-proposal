@@ -72,8 +72,8 @@ work with will tend to use whatever tools are normal in their communities and
 make it easy to get their job done.
 
 Therefore to have a a large positive impact we need *normalization* and
-*sustainability*. We aim to make Magic Folders an easy, reliable tool for
-daily work so that it can be the normal way to collaborate.
+*sustainability*. We aim to make Magic Folders an intuitive, reliable tool for
+daily work so that it becomes a normal way to collaborate.
 
 To address sustainability, we bring to bear practices from startup culture,
 such as “Minimal Viable Product”, to reduce risks:
