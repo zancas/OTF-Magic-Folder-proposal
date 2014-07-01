@@ -34,6 +34,8 @@ is started up.
 To detect local filesystem changes on Windows there are at least two APIs
 provided by Windows — `ReadDirectoryChangesW` ¹ and `NTFS change journals` ².
 
+We prefer/know about/are familiar with API X, so we'll use it.
+
 To detect local filesystem changes on Linux there is an API named
 `inotify` ³. We already use it for the filesystem monitoring in the current
 version of Tahoe-LAFS. This design is to make it scalable and reliable.
