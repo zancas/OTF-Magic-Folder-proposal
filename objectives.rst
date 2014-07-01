@@ -1,8 +1,4 @@
-﻿.. -*- coding: utf-8-with-signature -*-
-
-============
- Objectives
-============
+﻿
 
 Objective 1—Design local filesystem integration
 ===============================================
@@ -34,16 +30,11 @@ the entire magic folder in certain conditions, such as when the sync client
 is started up.
 
 To detect local filesystem changes on Windows there are at least two APIs
-provided by Windows — `ReadDirectoryChangesW`_ and `NTFS change journals`_.
-
-.. _ReadDirectoryChangesW: http://msdn.microsoft.com/en-us/library/aa365465%28v=VS.85%29.aspx
-.. _NTFS change journals: http://msdn.microsoft.com/en-us/library/aa363798%28v=VS.85%29.aspx
+provided by Windows — `ReadDirectoryChangesW` ¹ and `NTFS change journals` ².
 
 To detect local filesystem changes on Linux there is an API named
-`inotify`_. We already use it for the filesystem monitoring in the current
+`inotify` ³. We already use it for the filesystem monitoring in the current
 version of Tahoe-LAFS. This design is to make it scalable and reliable.
-
-.. _inotify: http://en.wikipedia.org/wiki/Inotify
 
 The deliverable for *Objective 1* is a document explaining the interface
 between the sync client and the local filesystem, how the sync client will
@@ -51,6 +42,12 @@ register to watch subdirectories as they are created or moved into the magic
 folder, and when the sync client will need to perform a full rescan. It will
 also explain what APIs or libraries the sync client will use to watch the
 filesystem on the various supported platforms.
+
+¹ ReadDirectoryChangesW <http://msdn.microsoft.com/en-us/library/aa365465%28v=VS.85%29.aspx>
+
+² NTFS change journals: <http://msdn.microsoft.com/en-us/library/aa363798%28v=VS.85%29.aspx>
+
+³ inotify <http://en.wikipedia.org/wiki/Inotify>
 
 Objective 2—Implement local filesystem integration
 ==================================================
