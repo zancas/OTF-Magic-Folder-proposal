@@ -18,7 +18,7 @@ Dropbox is used extensively both by professional human rights defenders, by
 activists, and by vulnerable populations in many nations.
 
 Dropbox and other similar commercial services are intended for maximum
-profitability and targeted at wealthy populations. They are not intended to
+profitability and targeted at wealthy populations. They are not designed to
 protect vulnerable or repressed users. All of the files of all Dropbox users
 are exposed to the Dropbox servers and to the laptops of Dropbox’s
 employees. An adversary who exploited any of those could spy on or alter any
