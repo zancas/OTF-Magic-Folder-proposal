@@ -4,8 +4,8 @@ There are already tools available to people in repressive countries to help
 them chat with one another and browse the web, such as Text Secure
 (<https://whispersystems.org>) and Tor (<https://torproject.org>). But
 chatting and web-browsing are only some of what we need in order to take part
-in the free and open dialogue of the Internet. We also need the ability to
-collaborate and to share our work.
+in the free and open dialogue of the Internet. We also need to collaborate
+and to share our work.
 
 Dropbox is currently used extensively by human rights defenders, journalists,
 and vulnerable people in repressive countries, both internally to ease the
@@ -62,8 +62,7 @@ unnecessary risk of being exploited or censored by repressive regimes.
 
 ³ Russell, J “Dropbox is blocked again in China, both apps and web-based service appear affected” (2014) http://thenextweb.com/asia/2014/06/19/dropbox-blocked-china-ending-four-month-period-access/
 
-Normalization and Sustainability
-================================
+**Normalization and Sustainability**
 
 Human rights defenders have an ethical imperative to “First, do no harm” in
 handling information about the vulnerable people with whom they work. At the
@@ -87,11 +86,9 @@ such as “Minimal Viable Product”, to reduce risks:
 See the “Sustainability” section for more detail about our strategy to
 mitigate such risks.
 
-Technical Description
-=====================
+**Technical Description**
 
-Leverage the existing functionality
------------------------------------
+*Leverage the existing functionality*
 
 The strategy for Magic Folders is to make a “Minimum Viable Product” by
 leveraging Tahoe-LAFS's existing functionality. Tahoe-LAFS already has a
@@ -112,27 +109,26 @@ from the remote side will be a simple polling loop that re-uses Tahoe-LAFS's
 existing functionality, instead of a more efficient asynchronous notification
 system that would require more development time.
 
-How Do You Magically Link Two Folders?
---------------------------------------
+*How Do You Magically Link Two Folders?*
 
 A design question which centrally impacts both usability and security is how
 the user specifies which folders are to be magically linked with which other
 folders (on other devices). If the process of linking two remote folders to
 each other is cumbersome or confusing, this may prevent users from adopting
-Magic Folders. At the same time, if the process is centralized or spoofable,
-then this would afford attackers the opportunity to exploit users by
-injecting an attack into the process of linking two folders together.
+Magic Folders. At the same time, if the process is spoofable or controlled by
+a central service, then this would afford attackers the opportunity to
+exploit users by injecting an attack into the process of linking two folders
+together.
 
 We will design a simple process based on sending an short “invitation” code
 from one device to the other and entering it into the second device. This is
-a trade-off with good decentralization and security properties, with
-hopefully acceptable usability, and (very importantly) with earliest
-time-to-market for the Minimum Viable Product.
+a trade-off with good decentralization and security properties, with (we
+think) acceptable usability, and (very importantly) with short
+time-to-market.
 
-Managing simultaneous changes to shared files
----------------------------------------------
+*Managing simultaneous changes to shared files*
 
-When two or more users are making simultaneous edits to shared files and
+When two or more users make simultaneous changes to shared files and
 directories, this can lead to subtle and complicated problems. Our approach
 is to follow the example of the early versions of Dropbox, which gained great
 marketshare without attempting to automatically resolve such complicated
@@ -147,11 +143,9 @@ the conflict.
 The latter information has to include access to previous versions of the
 files.
 
-Questions and Answers
-=====================
+**Questions and Answers**
 
-Breathing Space or Convergence?
--------------------------------
+*Breathing Space or Convergence?*
 
 This technology changes the playing field by eliminating a central point of
 vulnerability. Current file-sharing and synchronization tools are vulnerable
@@ -171,8 +165,7 @@ This negates the traditional attack of compromising the server in order to
 gain access to *all* clients. Instead, an attacker will have to compromise
 each client to gain access to that client. This changes the playing field.
 
-What is the asymmetry for this solution?
-----------------------------------------
+*What is the asymmetry for this solution?*
 
 This solution focuses on reducing the concentration of vulnerability in the
 central server(s). At a system-wide level, this solution asymmetrically
@@ -183,15 +176,14 @@ With this solution it is no longer the case that a single successful attack
 (i.e., remote compromise of a server) gains power over *all* of the users of
 a potentially large system such as Dropbox.
 
-On the other hand, for a typical *individual* user, this solution doesn't
-change their vulnerability much, because they are typically vulnerable to
-attacks on their endpoint (P.C. or mobile device). This solution closes only
-a single avenue of vulnerability (namely, an attack on their endpoint which
-originates from the file-sharing/synchronization server), but it doesn't
-protect them against other compromises of their endpoint.
+*How to defeat this effort?*
 
-How to defeat this effort?
---------------------------
+For a typical *individual* user, this solution doesn't change their
+vulnerability much, because they are typically vulnerable to attacks on their
+endpoint (P.C. or mobile device). This solution closes only a single avenue
+of vulnerability (namely, an attack on their endpoint which originates from
+the file-sharing/synchronization server), but it doesn't protect them against
+other compromises of their endpoint.
 
 To defeat this effort in the center would require breaking state-of-the-art
 cryptography. Instead, focus your efforts on the endpoints and the human
