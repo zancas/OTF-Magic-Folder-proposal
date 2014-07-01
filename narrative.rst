@@ -178,7 +178,7 @@ a potentially large system such as Dropbox.
 
 *How to defeat this effort?*
 
-For a typical *individual* user, this solution doesn't change their
+This solution doesn't change an *individual* user's 
 vulnerability much, because they are typically vulnerable to attacks on their
 endpoint (P.C. or mobile device). This solution closes only a single avenue
 of vulnerability (namely, an attack on their endpoint which originates from
@@ -194,7 +194,7 @@ the encryption keys, there is no central access-control-server which has an
 opportunity to detect that someone (you) just gained read access to some
 data. In theory, the storage servers might be able to detect a pattern of
 requests for ciphertext that could reveal your activities, but in practice
-Tahoe-LAFS storage servers are typically not monitored closely, since they
+Tahoe-LAFS storage servers are not monitored closely, since they
 store only ciphertext, and since they are unprivileged servers which can be
 dynamically added and removed.
 
