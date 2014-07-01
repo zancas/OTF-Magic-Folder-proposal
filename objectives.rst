@@ -54,8 +54,8 @@ Objective 2—Implement local filesystem integration
 
 *Objective 2* is to implement filesystem integration on Linux and Windows, as
 defined by *Objecive 1*. The deliverable for *Objective 2* is a code-base
-(satisfying the requirements listed in `Project Evaluation`_) for those
-platforms.
+(satisfying the requirements listed in the “Project Evaluation” section) for
+those platforms.
 
 Objective 3—Design algorithm for remote-to-local sync
 =====================================================
