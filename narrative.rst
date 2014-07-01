@@ -173,7 +173,7 @@ advantages the defenders, because it forces the attackers to expend more
 resources if they want to attack a larger user base.
 
 With this solution it is no longer the case that a single successful attack
-(i.e., remote compromise of a server) gains power over *all* of the users of
+(i.e., remote compromise of a server) grants power over *all* of the users of
 a potentially large system such as Dropbox.
 
 *How to defeat this effort?*
