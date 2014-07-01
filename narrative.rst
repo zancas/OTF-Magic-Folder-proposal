@@ -76,7 +76,8 @@ Therefore to have a a large positive impact we need *normalization* and
 daily work so that it can be the normal way to collaborate.
 
 To address sustainability, we bring to bear practices from startup culture,
-such as “Minimal Viable Product”, to reduce risks:
+such as “Minimal Viable Product”, this focusses our development and reduces
+the following risks:
 
 * Magic Folders could fail to fit the needs of users,
 * Magic Folders could arrive too late to help,
