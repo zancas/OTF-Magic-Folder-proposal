@@ -41,7 +41,7 @@ June of 2014, Dropbox was found to have been blocked, again, throughout
 China ³.
 
 It is impossible for users who rely on those products to switch to another
-infrastructure provider or to run their own server.
+service provider or to run their own server.
 
 We propose to extend the Tahoe-LAFS secure storage system to into an easy
 file-synchronization system like Dropbox. Tahoe-LAFS is a distributed storage
@@ -51,6 +51,10 @@ Stallman, the Electronic Frontier Foundation, the U.S. Defense Advanced
 Research Projects Agency, the U.S. National Security Agency, and the Open
 Internet Tools Project, among others. Tahoe-LAFS currently doesn’t offer the
 kind of intuitive, user-friendly workflow that Dropbox and Google Drive do.
+
+If we are successful, this technology will help empower people in repressive
+countries to communicate, collaborate, and organize, without incurring
+unnecessary risk of being exploited or censored by repressive regimes.
 
 ¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
 
@@ -70,17 +74,24 @@ make it easy to get their job done.
 
 Therefore to have a a large positive impact we need *normalization* and
 *sustainability*. We aim to make Magic Folders an easy, reliable tool for
-daily work so that it can be the normal way to collaborate. We also bring to
-bear practices from startup culture, such as “Minimal Viable Product”, to
-reduce the risk of Magic Folders failing to fit the needs of users, or
-arriving too late. (See the “Sustainability” section for more detail.)
+daily work so that it can be the normal way to collaborate.
 
-If we are successful, this technology will help empower people in repressive
-countries to communicate, collaborate, and organize, without incurring
-unnecessary risk of being exploited or censored by repressive regimes.
+To address sustainability, we bring to bear practices from startup culture,
+such as “Minimal Viable Product”, to reduce risks:
+
+* Magic Folders could fail to fit the needs of users,
+* Magic Folders could arrive too late to help,
+* Magic Folders could prove economically unsustainable and could become
+  abandoned or ill-maintained.
+
+See the “Sustainability” section for more detail about our strategy to
+mitigate such risks.
 
 Technical Description
 =====================
+
+Leverage the existing functionality
+-----------------------------------
 
 The strategy for Magic Folders is to make a “Minimum Viable Product” by
 leveraging Tahoe-LAFS's existing functionality. Tahoe-LAFS already has a
@@ -101,18 +112,40 @@ from the remote side will be a simple polling loop that re-uses Tahoe-LAFS's
 existing functionality, instead of a more efficient asynchronous notification
 system that would require more development time.
 
+How Do You Magically Link Two Folders?
+--------------------------------------
+
 A design question which centrally impacts both usability and security is how
 the user specifies which folders are to be magically linked with which other
 folders (on other devices). If the process of linking two remote folders to
 each other is cumbersome or confusing, this may prevent users from adopting
 Magic Folders. At the same time, if the process is centralized or spoofable,
 then this would afford attackers the opportunity to exploit users by
-injecting an attack into the setup process. We propose a simple
+injecting an attack into the process of linking two folders together.
 
-XXX incomplete
+We will design a simple process based on sending an short “invitation” code
+from one device to the other and entering it into the second device. This is
+a trade-off with good decentralization and security properties, with
+hopefully acceptable usability, and very importantly with minimal development
+effort required for the Minimum Viable Product.
 
+Managing simultaneous changes to shared files
+---------------------------------------------
 
+When two or more users are making simultaneous edits to shared files and
+directories, this can lead to subtle and complicated problems. Our approach
+is to follow the example of the early versions of Dropbox, which gained great
+marketshare without attempting to automatically resolve such complicated
+situations. Instead, the minimum viable product needs only two things:
 
+1. To reliably detect and display to the user when such conflicts have
+occurred, and
+
+2. To provide enough information to the user that they can manually resolve
+the conflict.
+
+The latter information has to include access to previous versions of the
+files.
 
 Questions and Answers
 =====================
@@ -120,20 +153,19 @@ Questions and Answers
 Breathing Space or Convergence?
 -------------------------------
 
-This technology changes the playing field by eliminating a centralized point
-of vulnerability. Current file-sharing and synchronization tools are
-vulnerable *both* at the endpoints where the users authenticate and perform
-actions, *and* at the center, where the servers provide services and control
-access.
+This technology changes the playing field by eliminating a central point of
+vulnerability. Current file-sharing and synchronization tools are vulnerable
+*both* at the endpoints where the users authenticate and perform actions,
+*and* at the center, where the servers provide services and control access.
 
 With this technology, the vulnerability at the center is almost entirely
 eliminated. The servers never have access to plaintext, encryption keys, or
-signing keys, so there is no vulnerability to the servers with regard to the
-confidentiality or data-integrity properties. In addition the remaining
-functions of the servers are performed by a decentralized, dynamic set of
-servers, reducing vulnerability to the servers for the availability and
-reliability properties. I.e. the system is both cryptographically secure and
-also robust against deletion, disruption, and denial-of-service attacks.
+signing keys, so users are not vulnerable to the servers with regard to
+confidentiality or data-integrity. In addition the remaining functions of the
+servers are performed by a decentralized, dynamic set of servers, reducing
+vulnerability to the servers for availability and reliability. I.e. the
+system is both cryptographically secure and is also robust against deletion,
+disruption, and denial-of-service attacks.
 
 This negates the traditional attack of compromising the server in order to
 gain access to *all* clients. Instead, an attacker will have to compromise
