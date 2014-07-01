@@ -1,5 +1,4 @@
-﻿.. -*- coding: utf-8-with-signature -*-
-
+﻿
 
 * ethical imperative: Human rights defenders have a "First do no harm" ethical imperative to protect the information of the people they work with.
 
@@ -7,24 +6,16 @@
 
 * sustainability: the Tahoe-LAFS project is a thriving open source community of independent hackers and organizations from around the world. Magic Folders will be exciting and welcome, and will attract support from many contributors. In addition, LeastAuthority intends to sell Magic Folder commercial services, and to continue to invest in improving it and producing complementary products and services.
 
-===================
- Executive Summary
-===================
+note that China blocked Dropbox recently
 
-Magic Folders will be an alternative to Dropbox that people in repressive
-countries can use to collaborate and to share their work. Unlike Dropbox,
-Magic Folders will protect the user’s files with end-to-end cryptography, so
-that adversaries who compromise a server cannot spy on the files or inject
-content into them.  Also unlike Dropbox, the entire stack of client and
-server will be Free and Open Source, so that people who are blocked from
-accessing Dropbox can deploy Magic Folders using only their own local
-resources.
 
-There are already tools available to people in politically repressive
-countries to help them chat with one another and browse the web. But chatting
-and web-browsing are only a subset of the things that we need in order to be
-included in the free and open dialogue of the Internet. We also need to be
-able to collaborate and to share our work with one another.
+
+There are already tools available to people in repressive countries to help
+them chat with one another and browse the web, such as Tor
+(<https://torproject.org>) and Text Secure
+(<https://whispersystems.org>). But chatting and web-browsing are only some
+of what we need in order to take part in the free and open dialogue of the
+Internet. We also need the ability to collaborate and to share our work.
 
 Dropbox is currently used extensively by human rights defenders, journalists,
 and vulnerable people in repressive countries, both internally to ease the
@@ -40,30 +31,34 @@ Dropbox and other similar commercial services are intended for maximum
 profitability and targeted at wealthy populations. They are not intended to
 protect vulnerable or repressed users. All of the files of all Dropbox users
 are exposed to the Dropbox servers and to the computers and laptops of
-Dropbox’s employees. An adversary who exploited those could spy on or inject
-content into any user’s files. The same is true of the other commercial
-services, such as Google Drive.
+Dropbox’s employees. An adversary who exploited any of those could spy on or
+alter any user’s files. The same is true of the other commercial services,
+such as Google Drive.
 
 In May of 2011, Dropbox was revealed to have lied when it claimed that its
-users' files were inaccessible to Dropbox employees. `1`_
+users' files were inaccessible to Dropbox employees ¹.
 
-.. _1: http://www.wired.com/2011/05/dropbox-ftc/
-
-¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) http://www.wired.com/2011/05/dropbox-ftc/
+¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
 
 And one month later, the potential impact was demonstrated when Dropbox
 accidentally turned off user verification, allowing anyone on the Internet to
-read or edit the files of any Dropbox user for 4 hours. `2`_
+read or edit the files of any Dropbox user for 4 hours ².
 
-.. _2: http://www.tomsguide.com/us/dropbox-Arash-Ferdowski-cloud-storage-code-update-login,news-11576.html
+² Parrish, K “Dropbox Accidently Turned Off Password for 4 Hrs” Tom's Guide (2011) <http://www.tomsguide.com/us/dropbox-Arash-Ferdowski-cloud-storage-code-update-login,news-11576.html>
 
-² Parrish, K “Dropbox Accidently Turned Off Password for 4 Hrs” Tom's Guide (2011) http://www.tomsguide.com/us/dropbox-Arash-Ferdowski-cloud-storage-code-update-login,news-11576.html
+In addition, since Dropbox and its competitors are centralized services, it
+is easy for repressive regimes to block access to those services. This
+provides repressive regimes with an easy method of forcing users of those
+services to fall-back to alternative methods of communication, possibly as a
+prelude to exploiting those users, or for political or business purposes. In
+June of 2014, Dropbox was found to have been blocked, again, throughout
+China ³.
 
-In addition, since Dropbox and Google Drive are centralized services, it is
-easy for repressive regimes to block access to those services. It is
-impossible for users of those products to switch to another infrastructure
-provider or to run their own infrastructure; instead they must rely on the
-remote, proprietary, centralized services.
+³ Russell, J “Dropbox is blocked again in China, both apps and web-based service appear affected” (2014) http://thenextweb.com/asia/2014/06/19/dropbox-blocked-china-ending-four-month-period-access/
+
+It is impossible for users who rely on those products to switch to another
+infrastructure provider or to run their own server; instead they must rely on
+the remote, proprietary, centralized services.
 
 We propose to extend the Tahoe-LAFS storage system to into an easy-to-use
 automatic file-synchronization system like Dropbox. Tahoe-LAFS is a
