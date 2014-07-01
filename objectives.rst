@@ -97,8 +97,8 @@ Objective 5—Design folder-linking user interface
 ================================================
 
 *Objective 5* is to write the design document for how users can conveniently
- and securely indicate which folders on some devices should be magically
- linked to which folders on other devices.
+and securely indicate which folders on some devices should be magically
+linked to which folders on other devices.
 
 As described in the “Narrative” section, this is a critical usability and
 security issue for which there is no known perfect solution, but which will
@@ -111,5 +111,5 @@ Objective 6—Implement folder-linking user interface
 
 *Objective 6* is to implement the folder-linking process as defined by
 *Objective 5*. The deliverable for *Objective 6* is a code-base implementing
-*this and satisfying the requirements listed in the “Project Evaluation”
-*section.
+this and satisfying the requirements listed in the “Project Evaluation”
+section.
