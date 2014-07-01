@@ -79,6 +79,10 @@ performance and to minimize unnecessary load on the network.
    overwritten objects in case the user didn't want this overwrite and wants
    to recover the old version.
 
+To ensure this recoverability property, the download process needs to backup
+the current (stale) local object, then overwrite it atomically (using the
+local filesystem's mv/rename operation) with the newly downloaded version.
+
 .. Also needed. Also from the Team Sync proposal: " *** ^-- MORE DRAGONS. Yesterday Daira came up with a good hack to subdue this dragon, too. Also ellided. "
 
 Objective 4—Implement algorithm for remove-to-local-sync
