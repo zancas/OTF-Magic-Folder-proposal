@@ -1,8 +1,8 @@
 ﻿
 
-There are already tools available to people in repressive countries to help
+There are already applications available to people in repressive countries to help
 them chat with one another and browse the web, such as Text Secure
-(<https://whispersystems.org>) and Tor (<https://torproject.org>). But
+(<https://whispersystems.org>) and Tor Browser (<https://www.torproject.org/projects/torbrowser.html>). But
 chatting and web-browsing are only some of what we need in order to take part
 in the free and open dialogue of the Internet. We also need to collaborate
 and to share our work.
@@ -43,18 +43,18 @@ China ³.
 It is impossible for users who rely on those products to switch to another
 service provider or to run their own server.
 
-We propose to extend the Tahoe-LAFS secure storage system to into an easy
+We propose to extend the Tahoe-LAFS secure storage system to into an easy to use
 file-synchronization system like Dropbox. Tahoe-LAFS is a distributed storage
 technology in which all files are protected with end-to-end cryptography. It
 has won praise and support from academic computer scientists, Richard
 Stallman, the Electronic Frontier Foundation, the U.S. Defense Advanced
 Research Projects Agency, the U.S. National Security Agency, and the Open
-Internet Tools Project, among others. Tahoe-LAFS currently doesn’t offer the
+Internet Tools Project, among others. But, Tahoe-LAFS currently doesn’t offer the
 kind of intuitive, user-friendly workflow that Dropbox and Google Drive do.
 
 If we are successful, this technology will help empower people in repressive
-countries to communicate, collaborate, and organize, without incurring
-unnecessary risk of being exploited or censored by repressive regimes.
+countries to communicate, collaborate, and organize, without incurring the
+unnecessary risks of being exploited or censored by repressive regimes.
 
 ¹ Singel, R “Dropbox Lied to Users About Data Security, Complaint to FTC Alleges” Wired (2011) <http://www.wired.com/2011/05/dropbox-ftc/>
 
@@ -76,7 +76,7 @@ Therefore to have a a large positive impact we need *normalization* and
 daily work so that it can be the normal way to collaborate.
 
 To address sustainability, we bring to bear practices from startup culture,
-such as “Minimal Viable Product”, to reduce risks:
+such as the “Minimal Viable Product”, to reduce risks:
 
 * Magic Folders could fail to fit the needs of users,
 * Magic Folders could arrive too late to help,
@@ -104,7 +104,7 @@ in two ways to make a minimum viable alternative to Dropbox:
 2. Monitor such changes being made to the remote magic folder, and download
    each new or changed file into the local one.
 
-In order to shorten time-to-market, the process of monitoring for changes
+In order to shorten time-to-market, the process of mnoitoring for changes
 from the remote side will be a simple polling loop that re-uses Tahoe-LAFS's
 existing functionality, instead of a more efficient asynchronous notification
 system that would require more development time.
