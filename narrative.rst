@@ -126,8 +126,8 @@ injecting an attack into the process of linking two folders together.
 We will design a simple process based on sending an short “invitation” code
 from one device to the other and entering it into the second device. This is
 a trade-off with good decentralization and security properties, with
-hopefully acceptable usability, and very importantly with minimal development
-effort required for the Minimum Viable Product.
+hopefully acceptable usability, and (very importantly) with earliest
+time-to-market for the Minimum Viable Product.
 
 Managing simultaneous changes to shared files
 ---------------------------------------------
