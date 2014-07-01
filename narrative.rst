@@ -1,39 +1,29 @@
 ﻿
 
-* ethical imperative: Human rights defenders have a "First do no harm" ethical imperative to protect the information of the people they work with.
-
-* normalization: Human rights defenders, journalists, activists, and vulnerable populations use whatever tools have been featured in the media, e.g. Dropbox, rather than using specialized tools that are designed for their use case. Therefore to achieve the best outcomes the safe tool needs to be targeted at a wide user base, and be easy to discover and to use.
-
-* sustainability: the Tahoe-LAFS project is a thriving open source community of independent hackers and organizations from around the world. Magic Folders will be exciting and welcome, and will attract support from many contributors. In addition, LeastAuthority intends to sell Magic Folder commercial services, and to continue to invest in improving it and producing complementary products and services.
-
-note that China blocked Dropbox recently
-
-
-
 There are already tools available to people in repressive countries to help
-them chat with one another and browse the web, such as Tor
-(<https://torproject.org>) and Text Secure
-(<https://whispersystems.org>). But chatting and web-browsing are only some
-of what we need in order to take part in the free and open dialogue of the
-Internet. We also need the ability to collaborate and to share our work.
+them chat with one another and browse the web, such as Text Secure
+(<https://whispersystems.org>) and Tor (<https://torproject.org>). But
+chatting and web-browsing are only some of what we need in order to take part
+in the free and open dialogue of the Internet. We also need the ability to
+collaborate and to share our work.
 
 Dropbox is currently used extensively by human rights defenders, journalists,
 and vulnerable people in repressive countries, both internally to ease the
 transmission of data between colleagues, and to transfer topical data in a
 timely way to safe repositories outside of the country. Danny O’Brien, of the
-Electronic Frontier Foundation, confirmed that organizations like CPJ use
-Dropbox in this way, and had heard of similar practices at Human Rights
-Watch. Enrique Piracés, of Benetech, confirmed that Dropbox is used
-extensively both by professional human rights defenders, by activists, and by
-vulnerable populations in many nations.
+Electronic Frontier Foundation, confirmed that organizations like Committee
+to Protect Journalists use Dropbox in this way, and had heard of similar
+practices at Human Rights Watch. Enrique Piracés, of Benetech, confirmed that
+Dropbox is used extensively both by professional human rights defenders, by
+activists, and by vulnerable populations in many nations.
 
 Dropbox and other similar commercial services are intended for maximum
 profitability and targeted at wealthy populations. They are not intended to
 protect vulnerable or repressed users. All of the files of all Dropbox users
-are exposed to the Dropbox servers and to the computers and laptops of
-Dropbox’s employees. An adversary who exploited any of those could spy on or
-alter any user’s files. The same is true of the other commercial services,
-such as Google Drive.
+are exposed to the Dropbox servers and to the laptops of Dropbox’s
+employees. An adversary who exploited any of those could spy on or alter any
+user’s files. The same is true of the other commercial services, such as
+Google Drive.
 
 In May of 2011, Dropbox was revealed to have lied when it claimed that its
 users' files were inaccessible to Dropbox employees ¹.
@@ -49,7 +39,7 @@ read or edit the files of any Dropbox user for 4 hours ².
 In addition, since Dropbox and its competitors are centralized services, it
 is easy for repressive regimes to block access to those services. This
 provides repressive regimes with an easy method of forcing users of those
-services to fall-back to alternative methods of communication, possibly as a
+services to fall-back to alternative means of collaboration, possibly as a
 prelude to exploiting those users, or for political or business purposes. In
 June of 2014, Dropbox was found to have been blocked, again, throughout
 China ³.
@@ -60,25 +50,69 @@ It is impossible for users who rely on those products to switch to another
 infrastructure provider or to run their own server; instead they must rely on
 the remote, proprietary, centralized services.
 
-We propose to extend the Tahoe-LAFS storage system to into an easy-to-use
-automatic file-synchronization system like Dropbox. Tahoe-LAFS is a
+We propose to extend the Tahoe-LAFS secure storage system to into an
+easy-to-use file-synchronization system like Dropbox. Tahoe-LAFS is a
 distributed storage technology in which all files are protected with
 end-to-end cryptography. It has won praise and support from academic computer
-science researchers, Richard Stallman, the Electronic Frontier Foundation,
-the U.S. Defense Advanced Research Projects Agency, the U.S. National
-Security Agency, and the Open Internet Tools Project, among others.
-Tahoe-LAFS currently doesn’t offer the kind of intuitive, user-friendly
-workflow and automatic synchronization that Dropbox and Google Drive do.
+scientists, Richard Stallman, the Electronic Frontier Foundation, the
+U.S. Defense Advanced Research Projects Agency, the U.S. National Security
+Agency, and the Open Internet Tools Project, among others. Tahoe-LAFS
+currently doesn’t offer the kind of intuitive, user-friendly workflow that
+Dropbox and Google Drive do.
+
+Normalization and Sustainability
+================================
+
+Human rights defenders have an ethical imperative to “First, do no harm” in
+handling information about the vulnerable people with whom they work. At the
+same time, they don't have time to investigate and train up on bespoke
+tools. Human rights defenders, journalists, activists, and the people they
+work with will tend to use whatever tools make it easy to get their job done.
+
+Therefore to have a a large positive impact we need *normalization* and
+*sustainability*. We aim to make Magic Folders an easy, reliable tool for
+daily work so that it can be the normal way to collaborate. We also aim to
+bring to bear practices from startup culture, such as “Minimal Viable
+Product”, to reduce the risk that the result will fail to fit the needs of
+users, or that it will arrive too late to help. (See the “Sustainability”
+section for more detail.)
 
 If we are successful, this technology will help empower people in repressive
-countries to communicate, collaborate, and organize.
+countries to communicate, collaborate, and organize, without incurring
+unnecessary risk of being exploited or censored by repressive regimes.
 
-=======================
- Questions and Answers
-=======================
+Technical Description
+=====================
+
+The strategy for Magic Folders is to make a “Minimum Viable Product” by
+leveraging Tahoe-LAFS's existing functionality. Tahoe-LAFS already has a
+`tahoe backup` command which efficiently uploads any files which have been
+changed since the most recent run of `tahoe backup`, and which preserves
+backup copies of older versions of each file. Magic Folders will extend this
+in two ways to make a minimum viable alternative to Dropbox:
+
+1. Hook into the local filesystem so that whenever files or directories are
+   changed in the local magic folder, this automatically triggers a run of
+   `tahoe backup` to upload any new changes from that folder.
+
+2. Monitor such changes being made to the remote magic folder, and download
+   each new or changed file into the local one.
+
+In order to shorten time-to-market, the process of monitoring for changes
+from the remote side will be a simple polling loop that re-uses Tahoe-LAFS's
+existing functionality, instead of a more efficient asynchronous notification
+system that would require more development time.
+
+XXX incomplete
+
+
+
+
+Questions and Answers
+=====================
 
 Breathing Space or Convergence?
-===============================
+-------------------------------
 
 This technology changes the playing field by eliminating a centralized point
 of vulnerability. Current file-sharing and synchronization tools are
@@ -99,14 +133,8 @@ This negates the traditional attack of compromising the server in order to
 gain access to *all* clients. Instead, an attacker will have to compromise
 each client to gain access to that client. This changes the playing field.
 
-How does this incentivize the adversary?
-========================================
-
-This incentivizes the adversary to focus their efforts on compromising the
-endpoints, such as through phishing, social engineering, etc.
-
 What is the asymmetry for this solution?
-========================================
+----------------------------------------
 
 This solution focuses on reducing the concentration of vulnerability in the
 central server(s). At a system-wide level, this solution asymmetrically
@@ -125,7 +153,7 @@ originates from the file-sharing/synchronization server), but it doesn't
 protect them against other compromises of their endpoint.
 
 How to defeat this effort?
-==========================
+--------------------------
 
 To defeat this effort in the center would require breaking state-of-the-art
 cryptography. Instead, focus your efforts on the endpoints and the human
